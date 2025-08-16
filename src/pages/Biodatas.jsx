@@ -120,6 +120,7 @@ const BiodatasPage = () => {
 
   const totalPages = Math.ceil(total / ITEMS_PER_PAGE);
 
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -141,6 +142,7 @@ const BiodatasPage = () => {
               <h2 className="text-2xl font-bold text-gray-800">
                 Filter Profiles
               </h2>
+              
             </div>
 
             <div className="space-y-6">
