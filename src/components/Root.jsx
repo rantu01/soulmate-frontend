@@ -7,22 +7,21 @@ const Root = () => {
   const navigation = useNavigation();
   const isLoading = navigation.state === "loading";
 
+  if (isLoading) {
+    // Show loader full screen before rendering anything else
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-pink-200">
+        <FaSpinner className="text-pink-600 text-5xl animate-spin" />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-
-      {/* Loader */}
-      {isLoading && (
-        <div className="fixed inset-0 bg-white bg-opacity-80 flex items-center justify-center z-50">
-          <FaSpinner className="text-pink-600 text-5xl animate-spin" />
-        </div>
-      )}
-
-      {/* Main Content */}
       <div className="flex-grow pt-22">
         <Outlet />
       </div>
-
       <Footer />
     </div>
   );

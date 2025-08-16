@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import { useEffect, useState } from "react";
+import { FaHeart } from "react-icons/fa";
 
 const Navbar = () => {
   const { currentUser, userData, loading } = useAuth();
@@ -51,7 +52,7 @@ const Navbar = () => {
               scrolled ? "text-pink-600" : "text-white"
             }`}
           >
-            <span className="mr-2">💍</span>
+            <FaHeart className="text-pink-300 text-3xl mr-2" />
             <span className="hidden sm:inline">SoulMate</span>
             <span className="sm:hidden">SM</span>
           </Link>
