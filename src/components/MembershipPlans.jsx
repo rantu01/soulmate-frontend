@@ -4,6 +4,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import { useState } from "react";
 import CheckoutContactRequest from "../pages/CheckoutContactRequest";
+import { useNavigate } from "react-router-dom";
 
 const stripePromise = loadStripe(
   "pk_test_51Rif1aQMQmOx02eF1FJqrzqUAN8z5hbwwWKqDICdb0rJXMnZ9klfoakD1188k7KEbvvsYukF3VzvPzvMXhgAx7fe00mwlQvrs4"
@@ -11,6 +12,7 @@ const stripePromise = loadStripe(
 
 const MembershipPlans = () => {
   const [selectedPlan, setSelectedPlan] = useState(null);
+  const navigate = useNavigate();
 
   const plans = [
     {
@@ -157,7 +159,12 @@ const MembershipPlans = () => {
 
                   {/* CTA Button */}
                   <button
-                    onClick={() => setSelectedPlan(plan)}
+                    onClick={
+                      () =>
+                        plan.name === "Basic"
+                          ? navigate("/biodatas") // ⬅️ redirect for Basic plan
+                          : setSelectedPlan(plan) // ⬅️ open Stripe modal for paid plans
+                    }
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
                       plan.popular
                         ? "bg-gradient-to-r from-pink-600 to-purple-600 text-white hover:shadow-lg"
