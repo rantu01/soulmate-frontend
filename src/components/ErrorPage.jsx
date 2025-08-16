@@ -22,6 +22,7 @@ const ErrorPage = () => {
           Go to Homepage
         </Link>
       </div>
+      
     </div>
   );
 };
