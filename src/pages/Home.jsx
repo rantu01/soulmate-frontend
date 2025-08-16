@@ -20,6 +20,7 @@ const Home = () => {
       <MembershipPlans></MembershipPlans>
       <BlogPage></BlogPage>
       <FAQ></FAQ>
+      
     </div>
   );
 };
