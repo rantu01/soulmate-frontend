@@ -7,11 +7,9 @@ import PremiumCard from "../components/PremiumMembersSection";
 import SuccessCounter from "../components/SuccessCounter";
 import SuccessStorySection from "../components/SuccessStorySection";
 
-
 const Home = () => {
   return (
     <div>
-        
       <Banner />
       <PremiumCard></PremiumCard>
       <HowItWorks></HowItWorks>
@@ -20,7 +18,6 @@ const Home = () => {
       <MembershipPlans></MembershipPlans>
       <BlogPage></BlogPage>
       <FAQ></FAQ>
-      
     </div>
   );
 };
