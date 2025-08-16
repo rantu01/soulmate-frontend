@@ -1,5 +1,6 @@
 import Banner from "../components/Banner";
 import BlogPage from "../components/Blog";
+import FAQ from "../components/FAQ";
 import HowItWorks from "../components/HowItWorks";
 import MembershipPlans from "../components/MembershipPlans";
 import PremiumCard from "../components/PremiumMembersSection";
@@ -18,7 +19,7 @@ const Home = () => {
       <SuccessStorySection></SuccessStorySection>
       <MembershipPlans></MembershipPlans>
       <BlogPage></BlogPage>
-      
+      <FAQ></FAQ>
     </div>
   );
 };

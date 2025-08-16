@@ -91,7 +91,7 @@ const BlogPage = () => {
               {blogPosts.map((post) => (
                 <div key={post.id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                   <div className="p-6">
-                    <span className="inline-block px-3 py-1 bg-gradient-to-r from-sky-500 to-sky-600 text-white text-sm rounded-full mb-4">
+                    <span className="inline-block px-3 py-1 bg-gradient-to-r from-pink-500 to-pink-600 text-white text-sm rounded-full mb-4">
                       {post.category}
                     </span>
                     <h3 className="text-xl font-bold text-gray-800 mb-3">{post.title}</h3>
